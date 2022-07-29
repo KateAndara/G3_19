@@ -16,7 +16,7 @@
             parent::set_names();
             $sql="SELECT * FROM editorial WHERE NUMERO_EDITORIAL=?";
             $sql=$conectar ->prepare($sql);
-            $sql->bindvaleu(1, $NUMERO_EDITORIAL);
+            $sql->bindvalue(1, $NUMERO_EDITORIAL);
             $sql->execute();            
             return $resultado=$sql->fetchALL(PDO::FETCH_ASSOC);            
         }
